@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="ExemploWinRT_DateETimePickers.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ExemploWinRT_DateETimePickers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="100">
+            <DatePicker x:Name="CompromissoDatePicker"
+                        Margin="5"
+                        Header="Selecione o dia do compromisso:"
+                        DayFormat="{}{day.integer} {dayofweek.abbreviated}"
+                        MonthFormat="{}{month.abbreviated(3)}"
+                        YearFormat="{}{year.abbreviated(2)}"
+                        DateChanged="CompromissoDatePicker_DateChanged" />
+            <TimePicker x:Name="CompromissoTimePicker"
+                        Margin="5"
+                        Header="Selecione a hora do compromisso:"
+                        ClockIdentifier="24HourClock"
+                        TimeChanged="CompromissoTimePicker_TimeChanged" />
+        </StackPanel>
+    </Grid>
+</Page>
